@@ -1,0 +1,80 @@
+{
+  "name": "leo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "devEnv": "cpy .env.dev .env",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check-types": "tsc",
+    "clean": "rimraf node_modules yarn.lock .next"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.ts": "tsc",
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,ejs}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@hookform/resolvers": "3.6.0",
+    "@sentry/cli": "^2.32.1",
+    "@sentry/nextjs": "8.13.0",
+    "@tremor/react": "3.17.4",
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@uidotdev/usehooks": "2.4.1",
+    "autoprefixer": "10.4.19",
+    "axios": "1.7.2",
+    "classnames": "2.5.1",
+    "cross-env": "7.0.3",
+    "date-fns": "3.6.0",
+    "eslint-config-next": "^14.2.4",
+    "framer-motion": "11.2.12",
+    "internal-ip": "8.0.0",
+    "next": "14.2.4",
+    "postcss": "8.4.38",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-dropzone": "14.2.3",
+    "react-geolocated": "4.1.2",
+    "react-hook-form": "7.52.0",
+    "react-hot-toast": "2.4.1",
+    "react-icons": "5.2.1",
+    "react-otp-input": "3.1.1",
+    "react-player": "2.16.0",
+    "recharts": "^2.12.7",
+    "rimraf": "5.0.7",
+    "sharp": "0.33.4",
+    "shx": "0.3.4",
+    "swr": "2.2.5",
+    "tailwindcss": "3.4.4",
+    "typescript": "5.5.2",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz",
+    "yup": "1.4.0"
+  },
+  "devDependencies": {
+    "@types/xlsx": "0.0.36",
+    "@typescript-eslint/eslint-plugin": "7.14.1",
+    "@typescript-eslint/parser": "7.14.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.7",
+    "prettier": "3.3.2"
+  }
+}

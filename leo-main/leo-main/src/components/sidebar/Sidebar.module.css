@@ -1,0 +1,10 @@
+.sideBar {
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+}
+
+.sideBar::-webkit-scrollbar {
+  display: none;
+}
